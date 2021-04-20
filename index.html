@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.scss">
+  <script type="text/javascript" src="./main.js"></script>
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+<body>
+  <section class="banner">
+      <div class="container">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great but understanding how developers think is invaluable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="right-section">
+    <div class="trial">
+      <p>Try it free 7 days then $20/mo. thereafter</p>
+    </div>
+
+    <form class="form" id="myForm" onsubmit="return validateForm()">
+      <input type="text" placeholder="First Name" name="fname">
+      <label id="error"></label>
+      <input type="text" placeholder="Last Name" name="lname">
+      <label id="ln-error"></label>
+      <input type="text" placeholder="Email Address" name="email">
+      <label id="email-error"></label>
+      <input type="password" placeholder="Password" name="psw">
+      <label id="psw-error"></label>
+      <input type="submit" value="CLAIM YOUR FREE TRIAL" class="input-btn">
+
+      <div class="container">
+        <p>By clicking the button, your are agreeing to our <span style="color: red;">Terms and Services</span></p>
+      </div>
+    </form>
+  </section>
+
+  </div>
+
+  <script>
+    function validateForm() {
+      var x = document.forms["myForm"]
+      ["fname"].value;
+      if (x == ""){
+        document.getElementById("error").innerHTML = "First Name cannot be empty!";
+
+        return false;
+      }
+    }
+
+
+
+
+  </script>
+ 
+  
+</body>
+</html>
